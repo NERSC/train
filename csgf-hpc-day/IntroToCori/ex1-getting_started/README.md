@@ -25,7 +25,7 @@ the GUI display. For Windows users, either [XMing] or [Cygwin/X] are good
 options, for the Mac [XQuartz]. (If you use Linux, you have an X server 
 already)
 
-For this morning's session you can jump forward to [Logging in] then return
+For this morning's session you can continue on to "Logging in" then return
 to installing an X server in the lunch break, if you don't have one already
 
 [Intel]: https://software.intel.com/en-us/intel-vtune-amplifier-xe
@@ -116,7 +116,7 @@ it into your environment with:
 $ module load training/csgf-2017
 ```
 
-The module sets an environment variable `$TRAINING`, which poitns at the location
+The module sets an environment variable `$TRAINING`, which points at the location
 of these materials. Copy them to your `$SCRATCH` directory with:
 
 ```console
