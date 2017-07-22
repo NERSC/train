@@ -123,6 +123,21 @@ of these materials. Copy them to your `$SCRATCH` directory with:
 $ cp -r $TRAINING $SCRATCH/
 ```
 
+
+## Viewing and editing files
+
+If you are not familiar with `vi` or `emacs`, a Windows-notepad-like editor
+named `nano` is available via the `nano` module. In `nano` you move around the
+file using the arrow keys, and simple command like cut, paste, open, save and
+quit are shown at the bottom of the screen, with `^` indicating `ctrl`:
+
+```console
+$ module load nano
+$ nano my_file.txt
+# hit ctrl-o to "WriteOut" (save), and ctrl-x to exit
+```
+
+
 ## Make sure you can use GUI programs with X
 
 Finally, if you have an X server set up on your laptop, you should be able to run:
