@@ -31,7 +31,7 @@ we will use `#SBATCH -C knl` for all of our exercises
  
 Your batch script will be run on the first node allocated to your job, to run
 a command on all nodes in the job you must use `srun`. `srun` also performs 
-the role of ``mpirun`` for running MPI jobs.
+the role of `mpirun` for running MPI jobs.
 
 So a typical job script will look like:
 
@@ -73,7 +73,7 @@ commands
 
 ### Step 2: Check on the progress of your job
 
-You can check on the progress of your jobs with ``sqs``:
+You can check on the progress of your jobs with `sqs`:
 
 ```console
 $ sqs
@@ -81,10 +81,10 @@ JOBID              ST   REASON       USER         NAME         NODES        USED
 5468709            PD   Priority     sleak        my_first_jo  2            0:00         5:00         2017-06-22T11:25:20   debug        16943        N/A
 ```
 
-If the ``ST`` field is ``PD``, your job is still in the queue. If it is ``R``, 
-your job is running. If your job does not appear in the ``sqs`` output then
+If the `ST` field is `PD`, your job is still in the queue. If it is `R`, 
+your job is running. If your job does not appear in the `sqs` output then
 it has completed (hopefully successfully), and you should see a file in the
-directory you submitted from like ``slurm-5468709.out``::
+directory you submitted from like `slurm-5468709.out`::
 
 ```console
 $ sqs
