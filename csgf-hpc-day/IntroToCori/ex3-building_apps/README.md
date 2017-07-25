@@ -10,23 +10,23 @@ your PATH and other environment variables to make the software available for
 use. To see exactly what a module does use `module show some_module_name`. To
 add a module to your environment use `module load some_module_name`. To
 remove it from your environment use `module unload some_module_name`. To see
-which modules you currently have loaded uyse `module list`.
+which modules you currently have loaded use `module list`.
 
 Compiling on the Cray is done with the compiler wrappers, `cc` for C, `CC` for
 C++ and `ftn` for Fortran. Many high-level compilation options are set based on 
 the modules you have loaded, especially:
 
- - The underlying compiler is set by the `PrgEnv-*` module you have loaded. At
-   NERSC we load `PrgEnv-intel` by default, so the compiler wrapeprs call 
-   `icc`, `icpc` or `ifort` as appropriate. For today, we will stick with this
-   default
-   
- - The target CPU architecture is set by loading one of `craype-haswell` or 
-   `craype-mic-knl`. At NERSC `craype-haswell` is loaded by default, also the
-   login nodes have Haswell CPUs. 
-   It is important to remember that when building for KNL we are 
-   cross-compiling - the executable will have instructions that Haswell does 
-   not support
+- The underlying compiler is set by the `PrgEnv-*` module you have loaded. At
+  NERSC we load `PrgEnv-intel` by default, so the compiler wrapeprs call 
+  `icc`, `icpc` or `ifort` as appropriate. For today, we will stick with this
+  default
+ 
+- The target CPU architecture is set by loading one of `craype-haswell` or 
+  `craype-mic-knl`. At NERSC `craype-haswell` is loaded by default, also the
+  login nodes have Haswell CPUs. 
+  It is important to remember that when building for KNL we are 
+  cross-compiling - the executable will have instructions that Haswell does 
+  not support
 
 **NOTE:** This execise assumes you are in the same directory as this README.md!
 

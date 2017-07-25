@@ -4,7 +4,7 @@ If you are reading this in a terminal on Cori .. congratulations! You're more
 than halfway there. Here are the steps you should have taken to get here, and
 what to do next
 
-**Note:** In the command samples here, `$` at teh beginning of a line 
+**Note:** In the command samples here, `$` at the beginning of a line 
 represents the bash prompt. Lines not beginning with `$` are sample outputs 
 from commands. Blocks like:
 
@@ -20,10 +20,10 @@ output has been cut for brevity.
 ## Setting up your workstation (with an X server)
 
 Later today we'll use [Intel] [VTune] to identify performance hotspots in a
-sample application, this will require your laptop to be running an X server for
-the GUI display. For Windows users, either [XMing] or [Cygwin/X] are good 
-options, for the Mac [XQuartz]. (If you use Linux, you have an X server 
-already)
+sample application. Vtune results are most easily explored using the GUI, which
+will require your laptop to be running an X server. For Windows users, either 
+[XMing] or [Cygwin/X] are good options, for the Mac [XQuartz]. (If you use 
+Linux, you have an X server already)
 
 For this morning's session you can continue on to "Logging in" then return
 to installing an X server in the lunch break, if you don't have one already
@@ -116,11 +116,15 @@ it into your environment with:
 $ module load training/csgf-2017
 ```
 
-The module sets an environment variable `$TRAINING`, which points at the location
-of these materials. Copy them to your `$SCRATCH` directory with:
+The module sets an environment variable `$TRAINING`, which points at the 
+location of these materials. `$TRAINING` is a git repository so you can clone 
+it to your `$SCRATCH` directory with:
 
 ```console
-$ cp -r $TRAINING $SCRATCH/
+$ git clone $TRAINING $SCRATCH/csgf-hpc-day
+Cloning into '/global/cscratch1/sd/elvis/csgf-hpc-day'...
+done.
+$ cd $SCRATCH/csgf-hpc-day
 ```
 
 
