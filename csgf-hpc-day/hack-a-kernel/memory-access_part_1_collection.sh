@@ -4,7 +4,7 @@
 #SBATCH -L SCRATCH               # Job requires $SCRATCH file system
 #SBATCH -C knl                   # use KNL nodes
 #SBATCH --perf=vtune             # use Vtune
-#SBATCH -A nstaff
+#SBATCH --reservation=csgftrain
 #SBATCH -J VTune_memory-access
 #SBATCH -o VTune_memory-access.%j.out
 
