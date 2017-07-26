@@ -84,7 +84,7 @@ JOBID              ST   REASON       USER         NAME         NODES        USED
 If the `ST` field is `PD`, your job is still in the queue. If it is `R`, 
 your job is running. If your job does not appear in the `sqs` output then
 it has completed (hopefully successfully), and you should see a file in the
-directory you submitted from like `slurm-5468709.out`::
+directory you submitted from like `slurm-5468709.out`:
 
 ```console
 $ sqs
@@ -95,7 +95,7 @@ total 12
 ...
 ```
 
-Take a look inside that file to see the output and any errors from your job::
+Take a look inside that file to see the output and any errors from your job:
 
 ```console
 $ less -FX slurm-5468709.out

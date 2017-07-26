@@ -39,6 +39,6 @@ Now look at `ex4b.sh`. It's the same experiments as `ex4a.sh`, but this time
 running hack-a-kernel and capturing the overall run time for all instances.
 
 Note that we're only running 12 at a time now (more won't fit in the memory of
-a KNL node) so you might not see cores ebing overcommitted. But you should see 
+a KNL node) so you might not see cores being overcommitted. But you should see 
 a difference in the time for the first 2 or 3 `srun` calls, and the final 
 `srun`
