@@ -51,7 +51,7 @@ $ cp ../../hack-a-kernel/hack-a-kernel.f90 .
 ```
 
 ```console
-$ ftn -g -debug inline-debug-info -O2 -dynamic -o hack-a-kernel-vtune.ex hack-a-kernel.f90
+$ ftn -g -debug inline-debug-info -O2 -dynamic -parallel-source-info=2 -o hack-a-kernel-vtune.ex hack-a-kernel.f90
 ```
 
 ### Step 3: Run the application
@@ -83,6 +83,9 @@ module load vtune
 # set the Vtune collection options we want:
 # A good starting point is the 'hpc-performance' experiment:
 vtuneopts="-collect hpc-performance"
+# Extension: another good starting point is:
+#vtuneopts="-collect general-exploration"
+# If you try this, be sure to make a new result_dir for it (see below)!
 
 # By default Vtune "finalizes" (collates and prepares) its results at the end
 # of each run. This procedure is serial and slow - not a good use of compute
@@ -136,4 +139,13 @@ The warnings about result being collected on another host are harmless, this
 will also lead to harmless warnings about being unable to find certain files.
 
 We'll stop here, and analyse the results this afternoon
+
+### Optional extra
+
+In case you can't resist - you can get a text performance report at the command
+line with: 
+
+```console
+$ amplxe-cl -r result_dir -report summary
+```
 
