@@ -1,10 +1,10 @@
 #!/bin/bash
 
-#### Which partition? 
-#SBATCH -p regular
+#### Which partition?
+#SBATCH -p debug
 
 #### name of the training reservation
-#SBATCH --reservation="CUG2B"
+###SBATCH --reservation="csgftrain"
 
 #### How many nodes?
 #SBATCH -N 1
@@ -12,8 +12,8 @@
 #### How long to run the job?
 #SBATCH -t 00:5:00
 
-#### Our reservation is for Haswell nodes
-#SBATCH -C haswell
+#### Our reservation is for KNL nodes
+#SBATCH -C knl
 
 #### Name the job
 #SBATCH -J "job_dwstat"

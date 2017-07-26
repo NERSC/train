@@ -1,10 +1,10 @@
 #!/bin/bash
 
 #### Which partition? 
-#SBATCH -p regular
+#SBATCH -p debug
 
 #### name of the training reservation
-#SBATCH --reservation="CUG2B"
+###SBATCH --reservation="csgftrain"
 
 #### How many nodes?
 #SBATCH -N 1
@@ -12,8 +12,8 @@
 #### How long to run the job?
 #SBATCH -t 00:5:00
 
-#### Our reservation is for Haswell nodes
-#SBATCH -C haswell
+#### Our reservation is for KNL nodes
+#SBATCH -C knl
 
 #### Name the job
 #SBATCH -J "job_use_persistent"
@@ -27,7 +27,10 @@
 
 
 #### Stage in some data to the persistent reservation. Remember to change this to point to your data! 
-#DW stage_in source=/global/cscratch1/sd/djbard/CUG2017/data/ destination=$DW_PERSISTENT_STRIPED_my_persistent_reservation/data/ type=directory
+
+#### Stage in a directory. Remember to change this directory to your training account scratch directory! You can also stage_in a file by specifying "type=file". 
+#DW stage_in source=/global/cscratch1/sd/djbard/train/csgf-hpc-day/IntroToBB/data  destination=$DW_JOB_STRIPED/data  type=directory
+
 
 
 
@@ -37,7 +40,6 @@ echo "*** The path to my BB allocation is:"
 echo $DW_PERSISTENT_STRIPED_my_persistent_reservation
 
 #### Check what's been staged in to your allocation
-ls
 echo "*** What's on my persistent reservation?:"
 
 echo "*** ls -lrt  $DW_PERSISTENT_STRIPED_my_persistent_reservation "
