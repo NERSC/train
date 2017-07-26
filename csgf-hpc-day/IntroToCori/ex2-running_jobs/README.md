@@ -45,9 +45,9 @@ So a typical job script will look like:
 # directives can be commented out: 
 ##SBATCH --reservation=csgftrain  # our reservation today
 
-mkdir -p $SCRATCH/csgf-hpc-day/IntroToCori/ex2-running_jobs
+mkdir -p $SCRATCH/csgf-2017/csgf-hpc-day/IntroToCori/ex2-running_jobs
 # after the first shell command, #SBATCH directives are ignored
-cd $SCRATCH/csgf-hpc-day/IntroToCori/ex2-running_jobs
+cd $SCRATCH/csgf-2017/csgf-hpc-day/IntroToCori/ex2-running_jobs
 
 # everything up until now ran only on the first node. To run a command in each
 # task (ie possibly more than one per node), we use srun:

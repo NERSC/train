@@ -135,10 +135,10 @@ location of these materials. `$TRAINING` is a git repository so you can clone
 it to your `$SCRATCH` directory with:
 
 ```console
-$ git clone $TRAINING $SCRATCH/csgf-hpc-day
-Cloning into '/global/cscratch1/sd/elvis/csgf-hpc-day'...
+$ git clone $TRAINING $SCRATCH/csgf-2017
+Cloning into '/global/cscratch1/sd/elvis/csgf-2017'...
 done.
-$ cd $SCRATCH/csgf-hpc-day
+$ cd $SCRATCH/csgf-2017/csgf-hpc-day
 ```
 
 

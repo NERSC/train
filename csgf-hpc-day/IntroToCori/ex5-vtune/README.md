@@ -128,7 +128,7 @@ with:
 
 ```console
 $ amplxe-cl -finalize -finalization-mode=full -r result_dir -search-dir $PWD
-amplxe: Using result path `/global/cscratch1/sd/elvis/csgf-hpc-day/IntroToCori/ex5-vtune/result_dir'
+amplxe: Using result path `/global/cscratch1/sd/elvis/csgf-2017/csgf-hpc-day/IntroToCori/ex5-vtune/result_dir'
 amplxe: Executing actions 39 % Resolving information for dangling locations
 amplxe: Warning: The current result was collected on another host. For proper symbol resolution, please specify search directories for the binaries of interest using the -search-dir command line option or "Binary/Symbol Search" dialog in GUI.
 ...

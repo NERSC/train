@@ -10,7 +10,7 @@
 ntasks=10
 nnodes=$SLURM_NNODES
 
-rundir=$SCRATCH/csgf-hpc-day/IntroToCori/ex2-running_jobs
+rundir=$SCRATCH/csgf-2017/csgf-hpc-day/IntroToCori/ex2-running_jobs
 mkdir -p $rundir
 cd $rundir
 
