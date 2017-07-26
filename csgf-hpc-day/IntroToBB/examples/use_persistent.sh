@@ -1,10 +1,10 @@
 #!/bin/bash
 
 #### Which partition? 
-#SBATCH -p debug
+#SBATCH -p regular
 
 #### name of the training reservation
-###SBATCH --reservation="csgftrain"
+#SBATCH --reservation="csgftrain"
 
 #### How many nodes?
 #SBATCH -N 1
