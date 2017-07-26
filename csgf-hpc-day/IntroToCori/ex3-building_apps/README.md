@@ -168,7 +168,7 @@ $ cat slurm-6018189.out
 For our final example, we'll build and run an OpenMP code (this one is in C):
 
 ```console
-$ cc -q openmp -o hello-omp.ex hello-omp.c
+$ cc -qopenmp -o hello-omp.ex hello-omp.c
 ```
 
 Let's call the job script for this one `ex3c.sh`:
