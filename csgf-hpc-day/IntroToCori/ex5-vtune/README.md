@@ -51,7 +51,10 @@ $ cp ../../hack-a-kernel/hack-a-kernel.f90 .
 ```
 
 ```console
-$ ftn -g -debug inline-debug-info -O2 -dynamic -parallel-source-info=2 -o hack-a-kernel-vtune.ex hack-a-kernel.f90
+$ ftn -g -debug inline-debug-info -O2 -qopenmp \
+      -dynamic -parallel-source-info=2 \
+      -qopt-report-phase=vec,openmp \
+      -o hack-a-kernel-vtune.ex hack-a-kernel.f90
 ```
 
 ### Step 3: Run the application
