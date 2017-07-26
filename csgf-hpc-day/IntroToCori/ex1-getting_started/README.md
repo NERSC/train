@@ -25,8 +25,21 @@ will require your laptop to be running an X server. For Windows users, either
 [XMing] or [Cygwin/X] are good options, for the Mac [XQuartz]. (If you use 
 Linux, you have an X server already)
 
+Better than any of these is [NX] .. X is notoriously "talkative" between the 
+client and server, which translates into very slow performance over 
+long-latency connections. NX bypasses this by running an X server local to 
+NERSC and using a far lighter protocol to project this virtual desktop to your
+laptop.
+
+For once-off use (like today), the easiest way to use NX is to point your web
+browser to https://nxcloud01.nersc.gov 
+
+For longer-term usage, you can download an NX player and configuration files 
+from [the NERSC website][NX].
+
 For this morning's session you can continue on to "Logging in" then return
-to installing an X server in the lunch break, if you don't have one already
+to installing NX or an X server in the lunch break, if you don't have one 
+already.
 
 [Intel]: https://software.intel.com/en-us/intel-vtune-amplifier-xe
 [Vtune]: http://www.nersc.gov/users/software/performance-and-debugging-tools/vtune/
@@ -36,6 +49,7 @@ to installing an X server in the lunch break, if you don't have one already
 
 [XQuartz]: https://www.xquartz.org/
 
+[NX]: http://www.nersc.gov/users/connecting-to-nersc/using-nx/
 
 ## Logging in
 
@@ -43,7 +57,7 @@ More detail about connecting to NERSC systems can be found at
 http://www.nersc.gov/users/connecting-to-nersc/ but for a quick start today:
 
 
-### From a command line (Mac, Linux)
+### From a command line (Mac, Linux, or within an NX session)
 
 If you are using XQuartz on a Mac, first launch it via Spotlight ("XQuartz") 
 
@@ -144,7 +158,7 @@ $ nano my_file.txt
 
 ## Make sure you can use GUI programs with X
 
-Finally, if you have an X server set up on your laptop, you should be able to run:
+Finally, if you have NX or an X server running, you should be able to run:
 
 ```console
 $ xterm &
