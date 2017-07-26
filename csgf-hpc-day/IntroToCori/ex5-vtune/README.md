@@ -1,6 +1,6 @@
 # CSGF HPC Day - Introduction to Cori
 
-## Exercise 5: Building and runnign with Vtune
+## Exercise 5: Building and running with Vtune
 
 Later today we'll optimize hack-a-kernel for KNL. The first step in 
 optimization is to understand the current performance, and for this we'll use
@@ -43,6 +43,12 @@ the executable, so we'll add `-g` to the command line. A side effect of `-g` is
 to set the optimization level to zero, so we'll return it to the default of 
 `-O2` explicitly. Finally, if your application uses inlined functions, adding 
 `-debug inline-debug-info` is helpful.
+
+First, we'll copy the source code into our current directory:
+
+```console
+$ cp ../../hack-a-kernel/hack-a-kernel.f90 .
+```
 
 ```console
 $ ftn -g -debug inline-debug-info -O2 -dynamic -o hack-a-kernel-vtune.ex hack-a-kernel.f90
@@ -102,12 +108,32 @@ srun --label -n 1 amplxe-cl $vtuneopts -- ./hack-a-kernel-vtune.ex
 
 ```
 
+In order for Slurm to find the correct Vtune kernel module, we must have vtune
+loaded in our environment before submitting the job:
 
+```console
+$ module load vtune
+$ sbatch ex5.sh
+Submitted batch job 6020460
+```
 
+### Step 4: Finalize the results
 
+Once the job is complete, if everything worked you should see a directory 
+`result_dir`. We'll prepare those results for viewing in the GUI (later today) 
+with:
 
+```console
+$ amplxe-cl -finalize -finalization-mode=full -r result_dir -search-dir $PWD
+amplxe: Using result path `/global/cscratch1/sd/elvis/csgf-hpc-day/IntroToCori/ex5-vtune/result_dir'
+amplxe: Executing actions 39 % Resolving information for dangling locations
+amplxe: Warning: The current result was collected on another host. For proper symbol resolution, please specify search directories for the binaries of interest using the -search-dir command line option or "Binary/Symbol Search" dialog in GUI.
+...
+amplxe: Executing actions 100 % done
+```
 
+The warnings about result being collected on another host are harmless, this
+will also lead to harmless warnings about being unable to find certain files.
 
-
-
+We'll stop here, and analyse the results this afternoon
 
