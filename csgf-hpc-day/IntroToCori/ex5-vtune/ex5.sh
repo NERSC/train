@@ -15,6 +15,9 @@ module load vtune
 # set the Vtune collection options we want:
 # A good starting point is the 'hpc-performance' experiment:
 vtuneopts="-collect hpc-performance"
+# Extension: another good starting point is:
+#vtuneopts="-collect general-exploration"
+# If you try this, be sure to make a new result_dir for it (see below)!
 
 # By default Vtune "finalizes" (collates and prepares) its results at the end
 # of each run. This procedure is serial and slow - not a good use of compute
