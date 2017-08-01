@@ -4,7 +4,7 @@
 #SBATCH -p regular
 
 #### name of the training reservation
-#SBATCH --reservation="csgftrain"
+#SBATCH --reservation="atpesctrain"
 
 #### How many nodes?
 #SBATCH -N 1
@@ -12,8 +12,8 @@
 #### How long to run the job? This doesn't need to be long as we're not actually executing anything on the compute node. 
 #SBATCH -t 00:1:00
 
-#### Our reservation is for KNL nodes
-#SBATCH -C knl
+#### Our reservation is for hasawell nodes
+#SBATCH -C haswell
 
 #### Name the job
 #SBATCH -J "job_create_persistent"
