@@ -6,7 +6,10 @@ We recommend working in teams of 2-3 people
 
 ```console
 $ module swap craype-haswell craype-mic-knl
-$ ftn hack-a-kernel.f90 -o hack-a-kernel.ex
+$ ftn -g -debug inline-debug-info -O2 -qopenmp \
+      -dynamic -parallel-source-info=2 \
+      -qopt-report-phase=vec,openmp \
+      -o hack-a-kernel-vtune.ex hack-a-kernel.f90
 ```
 
 ## Run:

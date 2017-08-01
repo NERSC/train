@@ -29,7 +29,7 @@
 #### Stage in some data to the persistent reservation. Remember to change this to point to your data! 
 
 #### Stage in a directory. Remember to change this directory to your training account scratch directory! You can also stage_in a file by specifying "type=file". 
-#DW stage_in source=/global/cscratch1/sd/djbard/train/csgf-hpc-day/IntroToBB/data  destination=$DW_JOB_STRIPED/data  type=directory
+#DW stage_in source=/global/cscratch1/sd/djbard/train/csgf-hpc-day/IntroToBB/data  destination=$DW_PERSISTENT_STRIPED_my_persistent_reservation/data  type=directory
 
 
 

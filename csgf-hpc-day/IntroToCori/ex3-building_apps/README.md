@@ -72,7 +72,7 @@ $ ftn -o hack-a-kernel-v0.ex hack-a-kernel.f90
 If you try to run the executable on the login node, you'll see an error:
 
 ```console
-$ ./hack-a-kernel
+$ ./hack-a-kernel-v0
 
 Please verify that both the operating system and the processor support Intel(R) AVX512F, ADX, RDSEED, AVX512ER, AVX512PF and AVX512CD instructions.
 
@@ -168,7 +168,7 @@ $ cat slurm-6018189.out
 For our final example, we'll build and run an OpenMP code (this one is in C):
 
 ```console
-$ cc -q openmp -o hello-omp.ex hello-omp.c
+$ cc -qopenmp -o hello-omp.ex hello-omp.c
 ```
 
 Let's call the job script for this one `ex3c.sh`:
