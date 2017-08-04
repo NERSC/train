@@ -4,7 +4,7 @@
 #SBATCH -p regular
 
 #### name of the training reservation
-#SBATCH --reservation="CUG2B"
+#SBATCH --reservation="atpesctrain"
 
 #### How many nodes? Let's try driving IOR from 4 nodes. The BB allocation will be mounted on all of them.  
 #SBATCH -N 4
