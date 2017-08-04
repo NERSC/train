@@ -1,0 +1,4 @@
+Here you will find example scripts for the ATPESC IO Day Burst Buffer session. The scripts are well commented - see these slides for a detailed breakdown of how to use the burst buffer:
+https://sites.google.com/lbl.gov/burstbuffer-tutorial-atpsec17
+
+Note that these scripts are written under the assumption that you are using a training account at NERSC, and that you will be using the reservation of compute nodes set up for Friday 4th Aug. This is a pool of Haswell nodes accessible using the option "#SBATCH --reservation="atpesctrain". If you do not have a training account, you will not be able to access this reservation. 
