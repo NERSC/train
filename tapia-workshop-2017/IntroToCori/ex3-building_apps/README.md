@@ -103,7 +103,7 @@ $ sbatch ex3a.sh
 Submitted batch job 6018089
 $ sqs
 JOBID              ST   REASON       USER         NAME         NODES        USED         REQUESTED    SUBMIT                PARTITION    RANK_P       RANK_BF
-6018089            PD   Priority     sleak        ex3a.sh      1            0:00         10:00        2017-07-25T10:50:59   knl          8578         N/A
+6018089            PD   Priority     mamelara     ex3a.sh      1            0:00         10:00        2017-07-25T10:50:59   knl          8578         N/A
 $ #wait till job completes
 $ cat slurm-6018089.out
 0:  Starting loop
@@ -205,4 +205,3 @@ $ cat slurm-6018233.out
 
 Note that each line is labelled as coming from the same `srun` task, despite 
 coming from different threads. Also note that the order is not gaurenteed!
-

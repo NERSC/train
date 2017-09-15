@@ -44,9 +44,9 @@ So a typical job script will look like:
 # directives can be commented out: 
 ##SBATCH --reservation=tapia  # our reservation today
 
-mkdir -p $SCRATCH/tapia-2017/tapia/IntroToCori/ex2-running_jobs
+mkdir -p $SCRATCH/tapia-2017/tapia-workshop-2017/IntroToCori/ex2-running_jobs
 # after the first shell command, #SBATCH directives are ignored
-cd $SCRATCH/tapia-2017/tapia/IntroToCori/ex2-running_jobs
+cd $SCRATCH/tapia-2017/tapia-workshop-2017/IntroToCori/ex2-running_jobs
 
 # everything up until now ran only on the first node. To run a command in each
 # task (ie possibly more than one per node), we use srun:
@@ -77,7 +77,7 @@ You can check on the progress of your jobs with `sqs`:
 ```console
 $ sqs
 JOBID              ST   REASON       USER         NAME         NODES        USED         REQUESTED    SUBMIT                PARTITION    RANK_P       RANK_BF
-5468709            PD   Priority     mamelara        my_first_jo  2            0:00         5:00         2017-06-22T11:25:20   debug        16943        N/A
+5468709            PD   Priority     mamelara        my_first_jo  2         0:00         5:00         2017-06-22T11:25:20   debug        16943        N/A
 ```
 
 If the `ST` field is `PD`, your job is still in the queue. If it is `R`, 
@@ -131,8 +131,3 @@ reservation):
 ```console
   $ salloc -C knl --reservation=tapia -N 1 -t 30 -L SCRATCH
 ```
-
-
-
-
-
