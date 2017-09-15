@@ -1,4 +1,4 @@
-# CSGF HPC Day - Introduction to Cori
+# TAPIA Conference 2017 - Introduction to Cori
 
 ## Exercise 3: Building applications
 
@@ -87,7 +87,7 @@ node:
 #SBATCH -t 10                    # Set 10 minute time limit
 #SBATCH -L SCRATCH               # Job requires $SCRATCH file system
 #SBATCH -C knl                   # use KNL nodes
-#SBATCH --reservation=csgftrain  # our reservation today
+#SBATCH --reservation=tapia  # our reservation today
 
 # Slurm will start us in the directory we submitted the job
 # srun is not strictly necessary here (it's a serial job), but we'll get
@@ -135,7 +135,7 @@ call this one `ex3b.sh`:
 #SBATCH -t 5                     # Set 5 minute time limit
 #SBATCH -L SCRATCH               # Job requires $SCRATCH file system
 #SBATCH -C knl                   # use KNL nodes
-#SBATCH --reservation=csgftrain  # our reservation today
+#SBATCH --reservation=tapia  # our reservation today
 
 nnodes=2
 ntasks=4
@@ -150,7 +150,7 @@ $ sbatch ex3b.sh
 Submitted batch job 6018189
 $ sqs
 JOBID              ST   REASON       USER         NAME         NODES        USED         REQUESTED    SUBMIT                PARTITION    RANK_P       RANK_BF
-6018189            PD   Priority     sleak        ex3b.sh      2            0:00         5:00         2017-07-25T11:02:08   knl          7946         N/A
+6018189            PD   Priority     mamelara     ex3b.sh      2            0:00         5:00         2017-07-25T11:02:08   knl          7946         N/A
 ```
 
 You should see a message from each of 4 tasks, 2 on each node.
@@ -179,7 +179,7 @@ Let's call the job script for this one `ex3c.sh`:
 #SBATCH -t 5                     # Set 5 minute time limit
 #SBATCH -L SCRATCH               # Job requires $SCRATCH file system
 #SBATCH -C knl                   # use KNL nodes
-#SBATCH --reservation=csgftrain  # our reservation today
+#SBATCH --reservation=tapia  # our reservation today
 
 export OMP_NUM_THREADS=5
 srun --label -n 1 ./hello-omp.ex
@@ -192,7 +192,7 @@ $ sbatch ex3c.sh
 Submitted batch job 6018233
 $ sqs
 JOBID              ST   REASON       USER         NAME         NODES        USED         REQUESTED    SUBMIT                PARTITION    RANK_P       RANK_BF
-6018233            PD   Priority     sleak        ex3c.sh      1            0:00         5:00         2017-07-25T11:08:15   knl          9945         N/A
+6018233            PD   Priority     mamelara     ex3c.sh      1            0:00         5:00         2017-07-25T11:08:15   knl          9945         N/A
 $ # wait ...
 $ cat slurm-6018233.out
 0: Hello World from thread = 2

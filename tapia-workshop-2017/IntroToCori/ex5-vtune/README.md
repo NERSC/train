@@ -1,4 +1,4 @@
-# CSGF HPC Day - Introduction to Cori
+# TAPIA Conference 2017 - Introduction to Cori
 
 ## Exercise 5: Building and running with Vtune
 
@@ -75,7 +75,7 @@ Our job script needs a couple of extra options:
 #SBATCH -L SCRATCH               # Job requires $SCRATCH file system
 #SBATCH -C knl                   # use KNL nodes
 #SBATCH --perf=vtune             # use Vtune
-#SBATCH --reservation=csgftrain  # our reservation today
+#SBATCH --reservation=tapia  # our reservation today
 
 module unload darshan
 module load vtune
@@ -131,7 +131,7 @@ with:
 
 ```console
 $ amplxe-cl -finalize -finalization-mode=full -r result_dir -search-dir $PWD
-amplxe: Using result path `/global/cscratch1/sd/elvis/csgf-2017/csgf-hpc-day/IntroToCori/ex5-vtune/result_dir'
+amplxe: Using result path `/global/cscratch1/sd/elvis/tapia-2017/tapia/IntroToCori/ex5-vtune/result_dir'
 amplxe: Executing actions 39 % Resolving information for dangling locations
 amplxe: Warning: The current result was collected on another host. For proper symbol resolution, please specify search directories for the binaries of interest using the -search-dir command line option or "Binary/Symbol Search" dialog in GUI.
 ...

@@ -1,4 +1,4 @@
-# CSGF HPC Day - Introduction to Cori
+#TAPIA Conference 2017- Introduction to Cori
 
 If you are reading this in a terminal on Cori .. congratulations! You're more
 than halfway there. Here are the steps you should have taken to get here, and
@@ -127,7 +127,7 @@ For today we have a module to help you obtain these training materials - load
 it into your environment with:
 
 ```console
-$ module load training/csgf-2017
+$ module load training/tapia-2017
 ```
 
 The module sets an environment variable `$TRAINING`, which points at the 
@@ -135,10 +135,10 @@ location of these materials. `$TRAINING` is a git repository so you can clone
 it to your `$SCRATCH` directory with:
 
 ```console
-$ git clone $TRAINING $SCRATCH/csgf-2017
-Cloning into '/global/cscratch1/sd/elvis/csgf-2017'...
+$ git clone $TRAINING $SCRATCH/tapia-2017
+Cloning into '/global/cscratch1/sd/sammy/tapia-2017'...
 done.
-$ cd $SCRATCH/csgf-2017/csgf-hpc-day
+$ cd $SCRATCH/tapia-2017/tapia-conference
 ```
 
 

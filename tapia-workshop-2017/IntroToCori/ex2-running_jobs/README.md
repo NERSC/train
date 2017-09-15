@@ -1,4 +1,4 @@
-# CSGF HPC Day - Introduction to Cori
+# TAPIA Conference - Introduction to Cori
 
 ## Exercise 2: Running jobs
 
@@ -20,12 +20,11 @@ All batch jobs on Cori must specify:
 - The filesystems required (`#SBATCH -L SCRATCH`)
 
 The queues on Cori can be very long, so for today we have a number of nodes
-reserved under a reservation name of "csgftrain". To use this reservation we
-add the directive `#SBATCH --reservation=csgftrain`
+reserved under a reservation name of "tapia". To use this reservation we
+add the directive `#SBATCH --reservation=tapia`
 
-For KNL nodes you can specify the mode - we'll cover what this means in the 
-next session this morning - and if necessary nodes will be rebooted into the 
-mode you requested. For today we will use the default mode (which at NERSC is 
+For KNL nodes you can specify the memory mode, don't worry too much about what 
+this means. For today we will use the default mode (which at NERSC is 
 `quad,cache`), and the nodes in our reservation have rebooting disabled, so
 we will use `#SBATCH -C knl` for all of our exercises
  
@@ -43,11 +42,11 @@ So a typical job script will look like:
 #SBATCH -C knl                   # use KNL nodes
 
 # directives can be commented out: 
-##SBATCH --reservation=csgftrain  # our reservation today
+##SBATCH --reservation=tapia  # our reservation today
 
-mkdir -p $SCRATCH/csgf-2017/csgf-hpc-day/IntroToCori/ex2-running_jobs
+mkdir -p $SCRATCH/tapia-2017/tapia/IntroToCori/ex2-running_jobs
 # after the first shell command, #SBATCH directives are ignored
-cd $SCRATCH/csgf-2017/csgf-hpc-day/IntroToCori/ex2-running_jobs
+cd $SCRATCH/tapia-2017/tapia/IntroToCori/ex2-running_jobs
 
 # everything up until now ran only on the first node. To run a command in each
 # task (ie possibly more than one per node), we use srun:
@@ -78,7 +77,7 @@ You can check on the progress of your jobs with `sqs`:
 ```console
 $ sqs
 JOBID              ST   REASON       USER         NAME         NODES        USED         REQUESTED    SUBMIT                PARTITION    RANK_P       RANK_BF
-5468709            PD   Priority     sleak        my_first_jo  2            0:00         5:00         2017-06-22T11:25:20   debug        16943        N/A
+5468709            PD   Priority     mamelara        my_first_jo  2            0:00         5:00         2017-06-22T11:25:20   debug        16943        N/A
 ```
 
 If the `ST` field is `PD`, your job is still in the queue. If it is `R`, 
@@ -91,7 +90,7 @@ $ sqs
 JOBID              ST   REASON       USER         NAME         NODES        USED         REQUESTED    SUBMIT                PARTITION    RANK_P       RANK_BF
 $ ls -lt
 total 12
--rw-rw---- 1 sleak staff  172 Jun 22 11:34 slurm-5468709.out  
+-rw-rw---- 1 mamelara staff  172 Jun 22 11:34 slurm-5468709.out  
 ...
 ```
 
@@ -101,7 +100,7 @@ Take a look inside that file to see the output and any errors from your job:
 $ less -FX slurm-5468709.out
 running a simple command in /global/cscratch1/sd/sleak/test_my_account
 total 4
--rw-rw---- 1 sleak sleak 115 Jun 22 11:34 stdout
+-rw-rw---- 1 mamelara mamelara 115 Jun 22 11:34 stdout
 1: hello from nid00509
 2: hello from nid00509
 0: hello from nid00509
@@ -126,11 +125,11 @@ requires) the same arguments as `sbatch`:
 - In sessions with a reservation, specify the reservation with 
   `--reservation=name_of_reservation`
 
-So to start an interactive session using KNL nodes today (using our `csgftrain` 
+So to start an interactive session using KNL nodes today (using our `tapia` 
 reservation):
 
 ```console
-  $ salloc -C knl --reservation=csgftrain -N 1 -t 30 -L SCRATCH
+  $ salloc -C knl --reservation=tapia -N 1 -t 30 -L SCRATCH
 ```
 
 

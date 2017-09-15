@@ -3,7 +3,7 @@
 #SBATCH -t 15                    # Set 15 minute time limit
 #SBATCH -L SCRATCH               # Job requires $SCRATCH file system
 #SBATCH -C knl                   # use KNL nodes
-#SBATCH --reservation=csgftrain  # our reservation today
+#SBATCH --reservation=tapia  # our reservation today
 
 # we'll run multiple copies of our hack-a-kernel from ex3:
 ex=../ex3-building_apps/hack-a-kernel-v0.ex
