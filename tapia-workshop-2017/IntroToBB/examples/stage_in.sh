@@ -25,7 +25,7 @@
 #DW jobdw capacity=200GB access_mode=striped type=scratch pool=wlm_pool
 
 #### Stage in a directory. Remember to change this directory to your training account scratch directory! You can also stage_in a file by specifying "type=file". 
-#DW stage_in source=/global/cscratch1/sd/djbard/tapia-workshop-2017/IntroToBB/data/  destination=$DW_JOB_STRIPED/data2  type=directory
+#DW stage_in source=/global/cscratch1/sd/djbard/train/tapia-workshop-2017/IntroToBB/data/  destination=$DW_JOB_STRIPED/data2  type=directory
 
 
 
@@ -40,7 +40,7 @@ echo "ls -lrtha  $DW_JOB_STRIPED/ "
 ls -lrtha  $DW_JOB_STRIPED/ 
 
 echo "ls -lrtha  $DW_JOB_STRIPED/data/  "
-ls -lrtha  $DW_JOB_STRIPED/data/
+ls -lrtha  $DW_JOB_STRIPED/data2/
 
 
 
