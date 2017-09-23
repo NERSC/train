@@ -1,4 +1,4 @@
-# CSGF HPC Day - Optimization Challenge on Cori (Hackathon)
+# Tapia 2017 - Optimization Challenge on Cori (Hackathon)
 
 We recommend working in teams of 2-3 people
 
