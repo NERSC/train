@@ -82,7 +82,7 @@ At 4.50pm we'll we'll announce the winner for the day!
 For the format of your best result, please send an email:
 
 ```
-To: bfriesen@lbl.gov, djbard@lbl.gov, sleak@lbl.gov
+To: bfriesen@lbl.gov, djbard@lbl.gov, mamelara@lbl.gov
 Subject: Hackathon result, team $choose_a_name
 Body:
   Team members' names: 
