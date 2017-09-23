@@ -76,8 +76,8 @@ You can check on the progress of your jobs with `sqs`:
 
 ```console
 $ sqs
-JOBID              ST   REASON       USER         NAME         NODES        USED         REQUESTED    SUBMIT                PARTITION    RANK_P       RANK_BF
-5468709            PD   Priority     mamelara        my_first_jo  2            0:00         5:00         2017-06-22T11:25:20   debug        16943        N/A
+JOBID       ST          USER         NAME         NODES        REQUESTED    SUBMIT                PARTITION  SCHEDULED_START     REASON
+5468709     PD          mamelara     my_first_j*  2            5:00         2017-09-22T18:24:26   knl        avail_in_~0.1_hrs   Resources
 ```
 
 If the `ST` field is `PD`, your job is still in the queue. If it is `R`, 
@@ -87,7 +87,7 @@ directory you submitted from like `slurm-5468709.out`:
 
 ```console
 $ sqs
-JOBID              ST   REASON       USER         NAME         NODES        USED         REQUESTED    SUBMIT                PARTITION    RANK_P       RANK_BF
+JOBID    ST    USER         NAME         NODES   REQUESTED    SUBMIT  PARTITION    SCHEDULED_START   REASON
 $ ls -lt
 total 12
 -rw-rw---- 1 mamelara staff  172 Jun 22 11:34 slurm-5468709.out  
@@ -98,7 +98,7 @@ Take a look inside that file to see the output and any errors from your job:
 
 ```console
 $ less -FX slurm-5468709.out
-running a simple command in /global/cscratch1/sd/sleak/test_my_account
+running a simple command in /global/cscratch1/sd/mamelara/tapia-2017/tapia/IntroToCori/ex2-running_jobs
 total 4
 -rw-rw---- 1 mamelara mamelara 115 Jun 22 11:34 stdout
 1: hello from nid00509
@@ -131,8 +131,3 @@ reservation):
 ```console
   $ salloc -C knl --reservation=tapia -N 1 -t 30 -L SCRATCH
 ```
-
-
-
-
-

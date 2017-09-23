@@ -3,14 +3,13 @@
 #SBATCH -t 5                     # Set 5 minute time limit
 #SBATCH -L SCRATCH               # Job requires $SCRATCH file system
 #SBATCH -C knl                   # use KNL nodes
-#SBATCH --reservation=tapia  # our reservation today
+##SBATCH --reservation=tapia  # our reservation today
 
 # for this exercise we'll run 10 tasks, distributed 
 # across all of the nodes in our job:
 ntasks=10
 nnodes=$SLURM_NNODES
 
-## THIS NEEDS TO CHANGE
 rundir=$SCRATCH/tapia-2017/tapia/IntroToCori/ex2-running_jobs
 mkdir -p $rundir
 cd $rundir

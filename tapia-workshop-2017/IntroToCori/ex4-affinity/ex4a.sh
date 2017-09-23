@@ -3,7 +3,7 @@
 #SBATCH -t 5                     # Set 5 minute time limit
 #SBATCH -L SCRATCH               # Job requires $SCRATCH file system
 #SBATCH -C knl                   # use KNL nodes
-#SBATCH --reservation=tapia  # our reservation today
+##SBATCH --reservation=tapia  # our reservation today
 
 # first a first, quick experiment, we'll run 30 copies of 'sleep',
 # just to see which cores they use:
