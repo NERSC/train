@@ -7,4 +7,4 @@
 
 module load perftools-base perftools-lite
 
-srun -n 1 ./hack-a-kernel.ex
+srun -n 1 -c 4 --cpu_bind=cores ./hack-a-kernel.ex
