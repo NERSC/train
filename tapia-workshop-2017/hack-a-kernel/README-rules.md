@@ -6,10 +6,11 @@ We recommend working in teams of 2-3 people
 
 ```console
 $ module swap craype-haswell craype-mic-knl
-$ ftn -g -debug inline-debug-info -O2 -qopenmp \
-      -dynamic -parallel-source-info=2 \
-      -qopt-report-phase=vec,openmp \
-      -o hack-a-kernel-vtune.ex hack-a-kernel.f90
+$ module unload darshan
+$ module load perftools-base perftools-lite
+$ ftn -g -O2 -qopenmp \
+      -qopt-report -qopt-report-phase=vec,openmp \
+      -o hack-a-kernel.ex hack-a-kernel.f90
 ```
 
 ## Run:
@@ -23,6 +24,8 @@ Make a job script (`hackathon.sh`) like:
 #SBATCH -L SCRATCH               # Job requires $SCRATCH file system
 #SBATCH -C knl                   # use KNL nodes
 #SBATCH --reservation=tapia      # our reservation today
+
+module load perftools-base perftools-lite
 
 srun -n 1 ./hack-a-kernel.ex
 ```
