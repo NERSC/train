@@ -54,6 +54,27 @@ Answer: (-16862103.1278241,0.000000000000000E+000)
 (-36828835.9338165,-14463922.8990243)
 ```
 
+There will also be a new directory created in the same directory from which you
+submitted the job, called something like "hack-a-kernel.ex+68738-2516s" (the
+numbers may be different in your case). This contains the profiling data for
+the hack-a-kernel program. You can view the data by running the "pat_report"
+command on the directory, e.g.:
+
+```console
+pat_report hack-a-kernel.ex+68738-2516s # (change the dir name as necessary)
+```
+
+This will print a lot of text to the screen. The part that will be of most
+interest is Table 2, the region where it shows which lines of the code consumed
+the most amount of time.
+
+It is convenient to redirect this output to a text file so that you can look
+through it with a text editor:
+
+```console
+pat_report hack-a-kernel.ex+68738-2516s > hack-a-kernel_profiling_report.txt
+```
+
 ## Optimize the code:
 
 ### Rules:
