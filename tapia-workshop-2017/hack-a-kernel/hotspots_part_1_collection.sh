@@ -4,7 +4,7 @@
 #SBATCH -L SCRATCH               # Job requires $SCRATCH file system
 #SBATCH -C knl                   # use KNL nodes
 #SBATCH --perf=vtune             # use Vtune
-#SBATCH --reservation=csgftrain
+#SBATCH --reservation=tapia
 #SBATCH -J VTune_hotspots
 #SBATCH -o VTune_hotspots.%j.out
 
