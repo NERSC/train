@@ -1,10 +1,10 @@
 #!/bin/bash
 
 #### Which partition? 
-#SBATCH -p regular
+#SBATCH -p special
 
 #### name of the training reservation
-#SBATCH --reservation="csgftrain"
+#SBATCH --reservation="tapia"
 
 #### How many nodes?
 #SBATCH -N 1
@@ -27,11 +27,8 @@
 
 
 #### Stage in some data to the persistent reservation. Remember to change this to point to your data! 
-
 #### Stage in a directory. Remember to change this directory to your training account scratch directory! You can also stage_in a file by specifying "type=file". 
-#DW stage_in source=/global/cscratch1/sd/djbard/train/csgf-hpc-day/IntroToBB/data  destination=$DW_PERSISTENT_STRIPED_my_persistent_reservation/data  type=directory
-
-
+#DW stage_in source=/global/cscratch1/sd/djbard/train/tapia-workshop-2017/IntroToBB/data  destination=$DW_PERSISTENT_STRIPED_my_persistent_reservation/data  type=directory
 
 
 

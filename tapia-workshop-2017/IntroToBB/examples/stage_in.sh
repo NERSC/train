@@ -1,10 +1,10 @@
 #!/bin/bash
 
 #### Which partition? 
-#SBATCH -p regular
+#SBATCH -p special
 
 #### name of the training reservation
-#SBATCH --reservation="csgftrain"
+#SBATCH --reservation="tapia"
 
 #### How many nodes?
 #SBATCH -N 1
@@ -25,7 +25,7 @@
 #DW jobdw capacity=200GB access_mode=striped type=scratch pool=wlm_pool
 
 #### Stage in a directory. Remember to change this directory to your training account scratch directory! You can also stage_in a file by specifying "type=file". 
-#DW stage_in source=/global/cscratch1/sd/djbard/train/csgf-hpc-day/IntroToBB/data/  destination=$DW_JOB_STRIPED/data2  type=directory
+#DW stage_in source=/global/cscratch1/sd/djbard/tapia-workshop-2017/IntroToBB/data/  destination=$DW_JOB_STRIPED/data2  type=directory
 
 
 

@@ -1,10 +1,10 @@
 #!/bin/ksh
 
 #### Which partition? 
-#SBATCH -p regular
+#SBATCH -p special
 
 #### name of the training reservation
-#SBATCH --reservation="CUG2B"
+#SBATCH --reservation="tapia"
 
 #### How many nodes? Let's try driving IOR from 4 nodes. The BB allocation will be mounted on all of them.  
 #SBATCH -N 4
@@ -13,7 +13,7 @@
 #SBATCH -t 00:5:00
 
 #### Our reservation is for Haswell nodes
-#SBATCH -C haswell
+#SBATCH -C knl
 
 #### Name the job
 #SBATCH -J "job_run_IOR"
@@ -23,11 +23,6 @@
 
 #### Request a 200GB scratch allocation. Note that you will need to request enough space on the BB to accomodate your IOR test - this will be (# nodes * # ranks per node * block size)
 #DW jobdw capacity=200GB access_mode=striped type=scratch
-
-
-
-
-
 
 
 #### Set the current directory 

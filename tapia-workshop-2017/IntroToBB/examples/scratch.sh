@@ -1,10 +1,10 @@
 #!/bin/bash
 
-#### Which partition? Use "regular" for the reservation 
-#SBATCH -p regular
+#### Which partition? Use "special" for the reservation 
+#SBATCH -p special
 
 #### name of the training reservation
-#SBATCH --reservation="csgftrain"
+#SBATCH --reservation="tapia"
 
 #### How many nodes?
 #SBATCH -N 1
