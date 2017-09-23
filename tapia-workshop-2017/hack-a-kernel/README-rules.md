@@ -17,7 +17,7 @@ $ ftn -g -debug inline-debug-info -O2 -qopenmp \
 Make a job script (`hackathon.sh`) like:
 
 ```bash
-#!/bin/bash -l
+#!/bin/bash
 #SBATCH -N 1                     # Use 1 node
 #SBATCH -t 10                    # Set 10 minute time limit
 #SBATCH -L SCRATCH               # Job requires $SCRATCH file system
