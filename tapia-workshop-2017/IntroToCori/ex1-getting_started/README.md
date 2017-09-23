@@ -1,4 +1,4 @@
-#TAPIA Conference 2017- Introduction to Cori
+# TAPIA Conference 2017- Introduction to Cori
 
 If you are reading this in a terminal on Cori .. congratulations! You're more
 than halfway there. Here are the steps you should have taken to get here, and
@@ -136,9 +136,9 @@ it to your `$SCRATCH` directory with:
 
 ```console
 $ git clone $TRAINING $SCRATCH/tapia-2017
-Cloning into '/global/cscratch1/sd/sammy/tapia-2017'...
+Cloning into '/global/cscratch1/sd/mamelara/tapia-2017'...
 done.
-$ cd $SCRATCH/tapia-2017/tapia-conference
+$ cd $SCRATCH/tapia-2017/tapia-workshop-2017
 ```
 
 
@@ -165,4 +165,3 @@ $ xterm &
 ```
 
 and see a small terminal window appear on your screen
-

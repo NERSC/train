@@ -44,9 +44,9 @@ So a typical job script will look like:
 # directives can be commented out: 
 ##SBATCH --reservation=tapia  # our reservation today
 
-mkdir -p $SCRATCH/tapia-2017/tapia/IntroToCori/ex2-running_jobs
+mkdir -p $SCRATCH/tapia-2017/tapia-workshop-2017/IntroToCori/ex2-running_jobs
 # after the first shell command, #SBATCH directives are ignored
-cd $SCRATCH/tapia-2017/tapia/IntroToCori/ex2-running_jobs
+cd $SCRATCH/tapia-2017/tapia-workshop-2017/IntroToCori/ex2-running_jobs
 
 # everything up until now ran only on the first node. To run a command in each
 # task (ie possibly more than one per node), we use srun:
