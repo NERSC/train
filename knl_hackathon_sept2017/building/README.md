@@ -61,7 +61,7 @@ $ ftn -o hack-a-kernel-v0.ex hack-a-kernel.f90
 If you try to run the executable on the login node, you'll see an error:
 
 ```console
-$ ./hack-a-kernel-v0
+$ ./hack-a-kernel-v0.ex
 
 Please verify that both the operating system and the processor support Intel(R) AVX512F, ADX, RDSEED, AVX512ER, AVX512PF and AVX512CD instructions.
 
